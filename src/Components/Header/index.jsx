@@ -1,8 +1,13 @@
+const Header = ({ title, subTitle }) => {
 
-const Header = ({title}) => {
-return (
-  <h1>{title}</h1>
-)
-}
+  title = "Hello"
+  subTitle = "Good bye"
+  return (
+    <>
+      <h1>{title}</h1>
+      <h2>{subTitle}</h2>
+    </>
+  );
+};
 
-export default Header
+export default Header;
