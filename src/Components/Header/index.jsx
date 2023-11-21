@@ -1,7 +1,5 @@
 const Header = ({ title, subTitle }) => {
 
-  title = "Hello"
-  subTitle = "Good bye"
   return (
     <>
       <h1>{title}</h1>
