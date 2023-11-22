@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const UserInput = () => {
+const UserInput = ({ onSubmit }) => {
   const [name, setName] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     setName(e.target.value);
@@ -9,8 +10,9 @@ const UserInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the submission (you can add your logic here)
-    console.log("Submitted name:", name);
+    setSubmitted(true);
+    onSubmit(name);
+    console.log("userinput name:", name);
   };
 
   return (
@@ -27,7 +29,6 @@ const UserInput = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
-      <p>{name}</p>
     </>
   );
 };

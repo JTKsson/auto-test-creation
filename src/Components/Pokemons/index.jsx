@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import CalculateWinner from "../CalculateWinner";
 
-const PokemonVote = () => {
+const PokemonVote = ({ name }) => {
+  console.log("pokemonvote name:", name)
   const [bulbasaurVote, setBulbasaurVote] = useState(0);
   const [charmanderVote, setCharmanderVote] = useState(0);
   const [squirtleVote, setSquirtleVote] = useState(0);
@@ -18,8 +19,10 @@ const PokemonVote = () => {
     setSquirtleVote(squirtleVote + 1);
   };
 
+
   return (
     <div>
+      {name && <p>Welcome {name}!</p>}
       <CalculateWinner
         bulbasaurVote={bulbasaurVote}
         charmanderVote={charmanderVote}
