@@ -28,23 +28,23 @@ const PokemonVote = () => {
       <div>
         <div>
           <h3>Bulbasaur</h3>
-          {/* Add your Bulbasaur UI elements here */}
+          <img src="" alt=""/>
           <button onClick={voteBulbasaur}>Vote Bulbasaur</button>
-          <p>{bulbasaurVote} votes</p>
+          <p data-testid='paragraph' >{bulbasaurVote} votes</p>
         </div>
 
         <div>
           <h3>Charmander</h3>
-          {/* Add your Charmander UI elements here */}
+          <img src="" alt=""/>
           <button onClick={voteCharmander}>Vote Charmander</button>
-          <p>{charmanderVote} votes</p>
+          <p data-testid='paragraph'>{charmanderVote} votes</p>
         </div>
 
         <div>
           <h3>Squirtle</h3>
-          {/* Add your Squirtle UI elements here */}
+          <img src="" alt=""/>
           <button onClick={voteSquirtle}>Vote Squirtle</button>
-          <p>{squirtleVote} votes</p>
+          <p data-testid='paragraph'>{squirtleVote} votes</p>
         </div>
       </div>
     </div>
