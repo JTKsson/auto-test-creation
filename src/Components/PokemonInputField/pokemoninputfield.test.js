@@ -16,11 +16,9 @@ describe('When the input field is filled, and the button is clicked, the name of
         render(<PokemonInput />)
 
         const inputField = screen.getByPlaceholderText('Enter new name');
-    //    const submitbutton = screen.getByRole('button', {name: (/Change name/i)});
-
+        
         fireEvent.change(inputField, { target: { value: 'David' } });
-    //    fireEvent.click(submitbutton)
-
+    
         expect(inputField.value).toBe('David');
     })
 })

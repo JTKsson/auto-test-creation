@@ -22,7 +22,7 @@ test('Renders the title, image, vote buttons, and scores for three Pokemon', () 
 
     const changeNameButtons = screen.getAllByRole('button', { name: /Change name/i });
 
-        expect(changeNameButtons.length).toBe(3)
+    expect(changeNameButtons.length).toBe(3)
 
     changeNameButtons.forEach((button) => {
     fireEvent.click(button);
