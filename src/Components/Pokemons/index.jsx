@@ -22,7 +22,7 @@ const PokemonVote = ({ name }) => {
 
   return (
     <div>
-      {name && <p>Welcome {name}!</p>}
+      {name && <p data-testid="user-input-display">Welcome {name}!</p>}
       <CalculateWinner
         bulbasaurVote={bulbasaurVote}
         charmanderVote={charmanderVote}
