@@ -1,5 +1,4 @@
 import {render, screen, fireEvent} from '@testing-library/react'
-
 import PokemonVote from '.'
 
 describe('PokemonVote component',() => {
@@ -18,14 +17,16 @@ test('Renders the title, image, vote buttons, and scores for three Pokemon', () 
 })
 
     test('Changes the input field value when the "Change name" button is clicked', () => {
-    render(< PokemonVote/>)
+    render(<PokemonVote />)
 
+    const inputFields = screen.getAllByPlaceholderText('Enter new name')
     const changeNameButtons = screen.getAllByRole('button', { name: /Change name/i });
 
     expect(changeNameButtons.length).toBe(3)
+    expect(inputFields.length).toBe(3)
 
     changeNameButtons.forEach((button) => {
     fireEvent.click(button);
   });
-})
+ })
 })
