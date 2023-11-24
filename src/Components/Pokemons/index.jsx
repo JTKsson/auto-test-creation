@@ -45,7 +45,7 @@ const PokemonVote = () => {
       <div>
         <div>
           <h3>{bulbasaurName}</h3>
-          <PokemonInput onNameChange={handleBulbasaurNameChange} />
+          <PokemonInput data-testid="bulbasaur-input" onNameChange={handleBulbasaurNameChange} />
           <img src="" alt=""/>
           <button onClick={voteBulbasaur}>Vote {bulbasaurName}</button>
           <p data-testid='paragraph'>{bulbasaurVote} votes</p>
@@ -53,7 +53,7 @@ const PokemonVote = () => {
 
         <div>
           <h3>{charmanderName}</h3>
-          <PokemonInput onNameChange={handleCharmanderNameChange} />
+          <PokemonInput data-testid="charmander-input" onNameChange={handleCharmanderNameChange} />
           <img src="" alt=""/>
           <button onClick={voteCharmander}>Vote {charmanderName}</button>
           <p data-testid='paragraph'>{charmanderVote} votes</p>
@@ -61,7 +61,7 @@ const PokemonVote = () => {
 
         <div>
           <h3>{squirtleName}</h3>
-          <PokemonInput onNameChange={handleSquirtleNameChange} />
+          <PokemonInput data-testid="squirtle-input" onNameChange={handleSquirtleNameChange} />
           <img src="" alt=""/>
           <button onClick={voteSquirtle}>Vote {squirtleName}</button>
           <p data-testid='paragraph'>{squirtleVote} votes</p>
