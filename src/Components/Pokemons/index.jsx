@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import CalculateWinner from "../CalculateWinner";
 import PokemonInput from "../PokemonInputField";
 
-const PokemonVote = () => {
+
+const PokemonVote = ({name}) => {
+  console.log("pokemonvote name:", name)
   const [bulbasaurName, setBulbasaurName] = useState('Bulbasaur');
   const [charmanderName, setCharmanderName] = useState('Charmander');
   const [squirtleName, setSquirtleName] = useState('Squirtle');
@@ -37,6 +39,7 @@ const PokemonVote = () => {
 
   return (
     <div>
+            {name && <p data-testid="user-input-display">Welcome {name}!</p>}
       <CalculateWinner
         bulbasaurVote={bulbasaurVote}
         charmanderVote={charmanderVote}
