@@ -3,8 +3,9 @@ import "./App.css";
 import PokemonVote from "./Components/Pokemons";
 import UserInput from "./Components/UserInput";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
-function App({title, subTitle}) {
+function App() {
   const [name, setName] = useState("");
 
   const handleNameSubmit = (submittedName) => {
@@ -15,9 +16,10 @@ function App({title, subTitle}) {
   
   return (
     <div className="App">
-      <Header title={title} subTitle={subTitle} />
+      <Header />
       <UserInput onSubmit={handleNameSubmit} />
       <PokemonVote name={name} />
+      <Footer/>
     </div>
   );
 }

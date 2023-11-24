@@ -1,12 +1,22 @@
 import Header from "."
 import {render, screen} from "@testing-library/react"
 
-test("There's an H1 tag rendered in the Header component with content", () => {
-  render(<Header title="Sith Showdown"/>)
-
-  const pageTitle = screen.getByRole("heading", {level: 1})
-
-  expect(pageTitle).toBeInTheDocument()
-  expect(pageTitle).toHaveTextContent(/sith showdown/i)
+describe("", () => {
+  test("There's a title rendered", () => {
+    render(<Header title="Sith Showdown"/>)
+  
+    const pageTitle = screen.getByRole("heading", {level: 1})
+  
+    expect(pageTitle).toBeInTheDocument()
+  
+  })
+  test("The rendered title contains content", () => {
+    render(<Header title="Sith Showdown"/>)
+  
+    const pageTitle = screen.getByRole("heading", {level: 1})
+  
+    expect(pageTitle).toHaveTextContent(/pokemon showdown/i)
+  
+  })
 
 })

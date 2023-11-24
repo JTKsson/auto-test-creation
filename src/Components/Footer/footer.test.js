@@ -2,10 +2,20 @@ import {render, screen} from '@testing-library/react'
 
 import Footer from '.'
 
-test('The footer with text is rendered', () => {
-    render(<Footer title='My footer'/>)
+describe("The footer is rendered with content", () => {
+    test('The footer title is rendered', () => {
+        render(<Footer/>)
+    
+        const footerTitle = screen.getByRole('heading', {level: 4})
+    
+        expect(footerTitle).toBeInTheDocument(); 
+    })
 
-    const footerContent = screen.getByRole('heading', {level: 3})
+    test("The footer contains content", () => {
+        render(<Footer/>)
 
-    expect(footerContent).toBeInTheDocument(); 
+        const footerContent = screen.getByRole('heading', {level: 4})
+
+        expect(footerContent).toHaveTextContent(/copyright/i)
+    })
 })

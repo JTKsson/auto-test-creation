@@ -2,7 +2,7 @@ import {render, screen} from "@testing-library/react"
 import CalculateWinner from "."
 
 describe("The pokemon in the lead or tied should be displayed", () => {
-  test ("The h2 with the winner is rendered", () => {
+  test ("The display with the winner is rendered", () => {
     render(<CalculateWinner/>)
 
     const winnerDisplay = screen.getByRole("heading", {level: 2})
